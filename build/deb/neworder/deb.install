@@ -1,0 +1,5 @@
+build/bin/{{.BinaryName}} usr/bin
+{{- if eq .BinaryName "gnod" }}
+build/deb/neworder/completions/bash/gnod etc/bash_completion.d
+build/deb/neworder/completions/zsh/_gnod usr/share/zsh/vendor-completions
+{{end -}}
