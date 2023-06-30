@@ -47,7 +47,7 @@ var (
 	allowedFutureBlockTimeSeconds = int64(15)         // Max seconds from current time allowed for blocks, before they're considered future blocks
 
 
-		// calcDifficultyEip5133 is the difficulty adjustment algorithm as specified by EIP 5133.
+	// calcDifficultyPopcat is the difficulty adjustment algorithm as specified by EIP 5133.
 	// It offsets the bomb a total of 11.4M blocks.
 	// Specification EIP-5133: https://eips.ethereum.org/EIPS/eip-5133
 	calcDifficultyPopcat = makeDifficultyCalculator(big.NewInt(15_000_000))
@@ -375,7 +375,7 @@ var (
 	big5          = big.NewInt(5) // 5초 추가
 	big9          = big.NewInt(9)
 	big10         = big.NewInt(10)
-	bigMinus99    = big.NewInt(-99)
+	bigMinus99    = big.NewInt(-99) 
 )
 
 // makeDifficultyCalculator creates a difficultyCalculator with the given bomb-delay.
